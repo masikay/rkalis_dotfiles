@@ -97,8 +97,8 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightC
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-# Enable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
+# Disable “natural” (Lion-style) scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -120,13 +120,13 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "nl" "tr"
-defaults write NSGlobalDomain AppleLocale -string "en_NL"
+defaults write NSGlobalDomain AppleLanguages -array "en" "it" "tr"
+defaults write NSGlobalDomain AppleLocale -string "en_DE"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Amsterdam" > /dev/null
+sudo systemsetup -settimezone "Europe/Frankfurt" > /dev/null
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -182,6 +182,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Enable spring loading for directories
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
@@ -417,4 +420,4 @@ defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
-success "FInished setting macOS defaults. Note that some of these changes require a logout/restart to take effect."
+success "Finished setting macOS defaults. Note that some of these changes require a logout/restart to take effect."
