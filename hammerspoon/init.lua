@@ -5,7 +5,6 @@ require "togglevpn"
 require "spectacle"
 require "shortcuts"
 require "bluetooth"
-require "toggle_input_volume"
 
 -----------------------------------------------
 -- Reload config on write
