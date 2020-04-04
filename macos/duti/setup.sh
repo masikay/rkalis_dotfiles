@@ -3,7 +3,7 @@
 DIR=$(dirname "$0")
 cd "$DIR"
 
-. ../scripts/functions.sh
+. ../../scripts/functions.sh
 
 info "Setting default applications using duti..."
 
