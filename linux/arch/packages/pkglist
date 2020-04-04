@@ -3,6 +3,7 @@ code
 expressvpn
 expressvpn-gui
 fish
+hub
 mc
 nomachine
 pamac-cli
@@ -11,6 +12,7 @@ teamviewer
 transmission-gtk
 transmission-remote-gtk
 transmission-cli
+vim
 vlc
 xclip
 xsel
