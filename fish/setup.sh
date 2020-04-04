@@ -1,5 +1,7 @@
 #! /usr/bin/env sh
 
+sudo -v
+
 DIR=$(dirname "$0")
 cd "$DIR"
 
@@ -36,7 +38,7 @@ set_fish_shell() {
             fi
         fi
         substep_info "Changing shell to fish"
-        if chsh -s $FISH; then
+        if sudo chsh -s $FISH; then
             substep_success "Changed shell to fish"
         else
             substep_error "Failed changing shell to fish"
