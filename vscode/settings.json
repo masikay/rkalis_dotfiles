@@ -55,4 +55,5 @@
         "*.cash": "solidity"
     },
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "terminal.integrated.shell.linux": "/usr/bin/fish",
 }

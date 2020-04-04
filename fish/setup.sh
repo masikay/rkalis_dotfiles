@@ -7,6 +7,7 @@ cd "$DIR"
 
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~/.config/fish)"
+FISH=$(which fish)
 
 info "Setting up fish shell..."
 
@@ -24,10 +25,10 @@ set_fish_shell() {
         success "Fish shell is already set up."
     else
         substep_info "Adding fish executable to /etc/shells"
-        if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
+        if grep --fixed-strings --line-regexp --quiet "$FISH" /etc/shells; then
             substep_success "Fish executable already exists in /etc/shells."
         else
-            if sudo bash -c "echo /usr/local/bin/fish >> /etc/shells"; then
+            if sudo bash -c "echo $FISH >> /etc/shells"; then
                 substep_success "Fish executable added to /etc/shells."
             else
                 substep_error "Failed adding Fish executable to /etc/shells."
@@ -35,7 +36,7 @@ set_fish_shell() {
             fi
         fi
         substep_info "Changing shell to fish"
-        if chsh -s /usr/local/bin/fish; then
+        if chsh -s $FISH; then
             substep_success "Changed shell to fish"
         else
             substep_error "Failed changing shell to fish"
