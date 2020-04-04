@@ -6,12 +6,12 @@ cd "$DIR"
 . ../../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath ~/.config/fish)"
+DESTINATION="$(realpath ~/.config/fish/functions)"
 
 info "Setting up fish shell..."
 
 substep_info "Creating fish config folders..."
-mkdir -p "$DESTINATION/functions"
+mkdir -p "$DESTINATION"
 
 find * -name "*.fish" -o -name "fishfile" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
