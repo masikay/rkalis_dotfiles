@@ -42,5 +42,4 @@ brew 'wget'
 brew 'youtube-dl'
 
 #mas 'Xcode', id: 497799835
-mas 'com.whoisonmywifi.macagent', id: 90976081
 mas 'Microsoft Remote Desktop 10', id: 12952034663
