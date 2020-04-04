@@ -120,8 +120,8 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "it" "tr"
-defaults write NSGlobalDomain AppleLocale -string "en_DE"
+defaults write NSGlobalDomain AppleLanguages -array "en" "it"
+defaults write NSGlobalDomain AppleLocale -string "en_IE"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
