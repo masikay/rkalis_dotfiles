@@ -10,7 +10,7 @@ COMMENT=\#*
 sudo -v
 
 info "Installing Arch/Manjaro packages..."
-pacman -Syu
-
-yay -S --needed -noconfirm - < pkglist
+sudo pacman -Syu --noconfirm
+sudo pacman -Sy --noconfirm yay
+yay -S --needed --noconfirm - < pkglist
 success "Finished installing Arch/Manjaro packages."

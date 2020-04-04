@@ -5,8 +5,14 @@ cd "$DIR"
 
 . ../scripts/functions.sh
 
+OS=$(uname)
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath ~/Library/Application\ Support/Code/User)"
+
+if [ "$OS" == "Darwin" ]; then
+    DESTINATION="$(realpath ~/Library/Application\ Support/Code/User)"
+elif [ "$OS" == "Linux" ]; then
+    DESTINATION="$(realpath ~/.vscode-oss)"
+fi
 
 info "Setting up Visual Studio Code..."
 
@@ -18,3 +24,4 @@ find * -not -name "$(basename ${0})" -type f | while read fn; do
 done
 
 success "Finished setting up Visual Studio Code"
+

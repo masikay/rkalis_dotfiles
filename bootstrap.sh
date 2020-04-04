@@ -6,14 +6,14 @@ cd "$DIR"
 . scripts/functions.sh
 
 os_family() {
-	OS=$(uname)
- 	if [ "${OS}" = "Darwin" ]; then
+    OS=$(uname)
+    if [ "${OS}" = "Darwin" ]; then
         OS_FAMILY=macos
-	elif [ "${OS}" = "Linux"]; then
+    elif [ "${OS}" = "Linux" ]; then
         OS_FAMILY=$(grep ID_LIKE /etc/os-release |  cut -d= -f2 | sed "s/\"//g")
     elif echo ${OS} | grep CYGWIN_NT; then
         OS_FAMILY=cygwin
-    elif echo ${OS} | MSYS_NT; then
+    elif echo ${OS} | grep MSYS_NT; then
         OS_FAMILY=mingw
     else
         OS_FAMILY=unknown
@@ -54,5 +54,9 @@ fi
 find * -name "setup.sh" -not -wholename "*packages*" -not -wholename "$SKIP*" | while read setup; do
     ./$setup
 done
+
+SOURCE=$(realpath .)
+DESTINATION=$(realpath ~)
+symlink "$SOURCE" "$DESTINATION/.dotfiles"
 
 success "Finished installing Dotfiles"
