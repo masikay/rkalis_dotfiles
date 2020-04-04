@@ -5,16 +5,15 @@ set -x -g TERM "xterm-256color"
 set -x -g LC_ALL en_GB.UTF-8
 set -x -g LANG en_GB.UTF-8
 
-# Coreutils bin and man folders
-set -x -g PATH (brew --prefix coreutils)/libexec/gnubin $PATH
-# set -x -g MANPATH (brew --prefix coreutils)/libexec/gnuman $MANPATH
+if [ (uname) == "Darwin" ]
+    # Coreutils bin and man folders
+    set -x -g PATH (brew --prefix coreutils)/libexec/gnubin $PATH
+    # set -x -g MANPATH (brew --prefix coreutils)/libexec/gnuman $MANPATH
 
-# Findutils bin and man folders
-set -x -g PATH (brew --prefix findutils)/libexec/gnubin $PATH
-# set -x -g MANPATH (brew --prefix findutils)/libexec/gnuman $MANPATH
-
-# go bin folder
-set -x -g PATH ~/go/bin $PATH
+    # Findutils bin and man folders
+    set -x -g PATH (brew --prefix findutils)/libexec/gnubin $PATH
+    # set -x -g MANPATH (brew --prefix findutils)/libexec/gnuman $MANPATH
+end
 
 # User bin folder
 set -x -g PATH ~/bin ~/.local/bin $PATH /usr/local/sbin
