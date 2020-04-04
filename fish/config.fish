@@ -5,7 +5,7 @@ set -x -g TERM "xterm-256color"
 set -x -g LC_ALL en_IE.UTF-8
 set -x -g LANG en_IE.UTF-8
 
-OS=(uname)
+set -x OS=(uname)
 if [ "$OS" == "Darwin" ]
     # Coreutils bin and man folders
     set -x -g PATH (brew --prefix coreutils)/libexec/gnubin $PATH
