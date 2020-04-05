@@ -11,7 +11,7 @@ SOURCE="$(realpath .)"
 if [ "$OS" == "Darwin" ]; then
     DESTINATION="$(realpath ~/Library/Application\ Support/Code/User)"
 elif [ "$OS" == "Linux" ]; then
-    DESTINATION="$(realpath ~/.config/Code\ -\ OSS/User)"
+    DESTINATION="$(realpath ~/.config/Code/User)"
 fi
 
 info "Setting up Visual Studio Code..."
