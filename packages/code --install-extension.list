@@ -1,13 +1,14 @@
-Angular.ng-template
+angular.ng-template
 azemoh.one-monokai
+baterson.copy-django-model-fields
 christian-kohler.path-intellisense
-CoenraadS.bracket-pair-colorizer
+coenraads.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 eamodio.gitlens
-EditorConfig.EditorConfig
+editorconfig.editorconfig
 idleberg.applescript
 joaompinto.asciidoctor-vscode
-johnpapa.Angular2
+johnpapa.angular2
 mikestead.dotenv
 mitaki28.vscode-clang
 ms-azuretools.vscode-docker
@@ -20,7 +21,7 @@ ms-vscode-remote.vscode-remote-extensionpack
 ms-vscode.cpptools
 msjsdiag.debugger-for-chrome
 naumovs.color-highlight
-PKief.material-icon-theme
+phief.material-icon-theme
 skyapps.fish-vscode
 trixnz.vscode-lua
 vincaslt.highlight-matching-tag
