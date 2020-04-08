@@ -56,4 +56,12 @@
     },
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
     "terminal.integrated.shell.linux": "/usr/bin/fish",
+    // workaround for fish: see https://github.com/microsoft/vscode-remote-release/issues/2509
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.remotePlatform": {
+        "gondor": "linux"
+    },
+    {"python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+   ],}
 }
