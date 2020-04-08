@@ -19,6 +19,9 @@
     "python.linting.pylintEnabled": true,
     "python.linting.pycodestyleEnabled": false,
     "python.pythonPath": "/usr/local/bin/python3",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+    ],
 
     "eslint.validate": [
         "javascript",
@@ -61,7 +64,4 @@
     "remote.SSH.remotePlatform": {
         "gondor": "linux"
     },
-    {"python.linting.pylintArgs": [
-        "--load-plugins=pylint_django"
-   ],}
 }
