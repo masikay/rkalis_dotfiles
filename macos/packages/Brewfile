@@ -36,9 +36,11 @@ brew 'glib'
 brew 'htop'
 brew 'hub'
 brew 'midnight-commander'
+brew 'node'
 brew 'python'
 brew 'ssh-copy-id'
 brew 'wget'
+brew 'yarn'
 brew 'youtube-dl'
 
 #mas 'Xcode', id: 497799835

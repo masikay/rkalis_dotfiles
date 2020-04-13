@@ -1,11 +1,11 @@
 chromium
-visual-studio-code-bin
 expressvpn
 expressvpn-gui
 fish
 hub
 mc
 neofetch
+nodejs
 nomachine
 pamac-cli
 postman
@@ -14,7 +14,9 @@ transmission-gtk
 transmission-remote-gtk
 transmission-cli
 vim
+visual-studio-code-bin
 vlc
 xclip
 xsel
+yarn
 youtube-dl
