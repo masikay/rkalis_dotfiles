@@ -1,4 +1,7 @@
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'buo/cask-upgrade'
+tap 'Schniz/tap'
 
 cask 'clover-configurator'
 cask 'deezer'

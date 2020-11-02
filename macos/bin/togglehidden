@@ -24,7 +24,7 @@ coloredEcho() {
 
 OS=$(uname)
 
-if [ "$OS" == "Darwgin" ]; then
+if [ "$OS" == "Darwin" ]; then
     GLOBAL=false
 
     while getopts ":gh" OPTION "$@" ; do

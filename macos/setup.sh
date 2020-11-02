@@ -272,6 +272,33 @@ defaults write com.apple.dock show-process-indicators -bool true
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
+# Add Launchpad to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/Launchpad.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# Add Mission Control to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/Mission Control.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# Add Chrome to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# Add Safari to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Safari.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# Add iTerm2 to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/iTerm.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# Add Visual Studio Code to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Visual Studio Code.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# Add ExpressVPN to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/ExpressVPN.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# Add Deezer to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Deezer.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# Add Podcasts to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/Podcasts.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
 # Show only open applications in the Dock
 #defaults write com.apple.dock static-only -bool true
 
@@ -417,4 +444,5 @@ defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
+killall Dock
 success "Finished setting macOS defaults. Note that some of these changes require a logout/restart to take effect."
